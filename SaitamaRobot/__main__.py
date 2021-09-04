@@ -21,7 +21,7 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-EMILIA_IMG = "https://telegra.ph/file/b37cec509d121c8c63518.jpg"
+EMILIA_IMG = "https://telegra.ph/file/bdbdaf8c4bd120f3d5877.jpg"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -54,16 +54,16 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [👩‍💼](https://telegra.ph/file/c766d686089a43e0ff33a.jpg) 
-`My name is` *Emilia*`
-`I am an Anime Themed group management bot.`
+`Hey There!` [👩‍💼](https://telegra.ph/file/bdbdaf8c4bd120f3d5877.jpg) 
+`My name is` *VALT AOI*`
+`I am an BEYBLADE Themed group management bot.`
 You can find my list of available commands with` *🔐Commands*   
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD EMILIA TO YOUR GROUP ➕️",url="t.me/EmiliaAnimeRoBot?startgroup=true"
+            text="➕️ ADD VALT AOI TO YOUR GROUP ➕️",url="t.me/valtaoibladerbot?startgroup=true"
         ),
     ],
     [
@@ -73,22 +73,22 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-          text="📮 Updates", url="https://t.me/TangentXOfficial"
+          text="📮 Updates", url="https://t.me/PigasusUpdates"
         ),
       
         InlineKeyboardButton(
-          text="📑 Logs", url="https://t.me/tangentlogger"
+          text="CHECK MY FRIEND", url="http://t.me/ShuKurenaithebot"
         ),
     ],
          
     [
        InlineKeyboardButton(
-           text="🐱 Support", url="https://t.me/TangentChats"
+           text="🐱 Support", url="https://t.me/PigasusSupport"
          ),
     ],
     [
         InlineKeyboardButton(
-          text="✒ Source", callback_data="source_"
+          text="BOT CREATOR", URL="https://t.me/Rohith_no_1"
         ),
      
     ],
@@ -96,7 +96,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [Emilia!]("https://telegra.ph/file/e5fc94ada18369f89c832.jpg") 
+`Hey there! My name is` [VALT AOI!]("https://telegra.ph/file/bdbdaf8c4bd120f3d5877.jpg") 
 I'm a Half Elf and help admins manage their groups with Some Powerful Features! \n`Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """
@@ -220,10 +220,10 @@ def start(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://telegram.dog/TangentChats")
+                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/PigasusSupport")
                   ],
                   [
-                  InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ", url="https://github.com/IzumiCypherX/EmiliaAnimeBot")
+                  InlineKeyboardButton(text="BOT CREATOR", url="https://t.me/Rohith_no_1")
                   ]
                 ]
             ),
@@ -357,14 +357,14 @@ def gabi_about_callback(update, context):
     query = update.callback_query
     if query.data == "gabi_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Emilia*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *VALT AOI*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\nIf you have any question about *Emilia*, let us know at .""",
+                 \n\nIf you have any question about *VALT AOI*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -465,7 +465,7 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="help_back"),
                                 InlineKeyboardButton(
-                                    text="Support", url="https://telegram.dog/TangentChats"
+                                    text="Support", url="https://t.me/PigasusSupport"
                                 )]]
             ),
         )
@@ -691,7 +691,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Emilia is Back Online💼")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "VALT AOI is Back Online💼")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
